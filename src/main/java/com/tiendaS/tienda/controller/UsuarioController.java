@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class UsuarioController {
 
     @Autowired
-    private UsuarioRepository repository;
+    private UsuarioRepository usuarioRepository;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/usuarios")
     public @ResponseBody Iterable<Usuario> findUsuario(){
-        return repository.findAll();
+        return usuarioRepository.findAll();
     }
 
 }
